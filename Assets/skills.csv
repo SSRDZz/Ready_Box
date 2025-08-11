@@ -1,14 +1,15 @@
-ID,Name,Range,CostType,Cost,Power,Speed,TriggerCondition,GainingType,GainingValue,Description,IsCounter,IsFeint,IsPenetrate,IsBleed,Movement,OpponentPush
-1,Jab,Mid,Stamina,1,1,1,OnAttackLand,Focus,1,"Basic jab with your lead hand. Recover 1 Focus on landed.
-",FALSE,FALSE,FALSE,FALSE,None,None
-2,Cross,Long,Stamina,2,2,2,OnAttackLand,Stamina,0,Rear hand Straight punch,FALSE,FALSE,FALSE,FALSE,None,None
-3,Lead Hook,Mid,Focus,3,2,4,OnAttackLand,Stamina,2,Quick hook with lead hand. Recover 2 Stamina on landed.,FALSE,FALSE,FALSE,FALSE,None,None
-4,Rear Hook,Close,Stamina,3,3,2,OnAttackLandClean,Power,1,Powerful Rear hand Hook. Deal additional 1 damage on clean hit.,FALSE,FALSE,FALSE,FALSE,None,None
-5,Lead Uppercut,Mid,Stamina,3,3,3,OnActivate,Stamina,0,Lead uppercut that caught opponent off-guard,FALSE,FALSE,FALSE,FALSE,None,None
-6,Rear Uppercut,Close,Stamina,3,2,2,OnAttackLand,Power,1,Devastating rear uppercut at close range. Deal additional 1 damage on landed.,FALSE,FALSE,FALSE,FALSE,None,None
-7,Stiff Jab,Mid,Stamina,1,2,1,OnAttackLand,Focus,1,Jab with you body weight behind it. Recover 1 Focus on landed.,FALSE,FALSE,FALSE,FALSE,None,None
-8,Flicker Jab,Long,Stamina,0,1,1,OnAttackLand,Focus,1,Quick jab that flick forward in weird angle. Recover 1 Focus on landed.,FALSE,FALSE,FALSE,FALSE,None,None
-9,Step back Jab,Mid,Stamina,1,1,1,OnAttackLand,Focus,1,Step back while throwing a jab. Recover 1 Focus on landed,FALSE,FALSE,FALSE,FALSE,Back,None
-10,Step in Jab,Mid,Stamina,1,1,1,OnAttackLand,Focus,1,Step in while throwing a jab. Recover 1 Focus on landed,FALSE,FALSE,FALSE,FALSE,Front,None
-11,Sharp Jab,Mid,Stamina,1,1,2,OnAttack,Focus,2,Sharp jab that snap out and retract quickly. Recover 2 Focus on landed.,FALSE,FALSE,FALSE,FALSE,None,None
-12,,,,,,,,,,,,,,,,
+ID,Name,Range,CostType,Cost,Power,Speed,TriggerCondition,GainingType,GainingValue,Description,IsCounter,IsFeint,IsPenetrate,IsBleed,IsStun,Movement,OpponentPush
+1,Jab,Mid,Stamina,1,1,1,OnAttackLand,Focus,1,Basic jab with your lead hand. Recover 1 Focus on landed.,FALSE,FALSE,FALSE,FALSE,FALSE,None,None
+2,Straight Punch,Long,Stamina,2,2,2,OnAttackLand,None,0,Rear hand Straight punch. Push opponent back.,FALSE,FALSE,FALSE,FALSE,FALSE,None,Back
+3,Lead Hook,Mid,Focus,3,2,4,OnAttackLand,Stamina,2,Quick hook with lead hand. Recover 2 Stamina on landed.,FALSE,FALSE,FALSE,FALSE,FALSE,None,None
+4,Rear Hook,Close,Stamina,3,3,2,OnAttackLandClean,Power,1,Powerful Rear hand Hook. Deal additional 1 damage on clean hit.,FALSE,FALSE,FALSE,FALSE,FALSE,None,None
+5,Lead Uppercut,Mid,Stamina,3,3,3,OnActivate,None,0,Lead uppercut that caught opponent off-guard,FALSE,FALSE,FALSE,FALSE,FALSE,None,None
+6,Rear Uppercut,Close,Stamina,3,2,2,OnAttackLand,Power,1,Devastating rear uppercut at close range. Deal additional 1 damage on landed.,FALSE,FALSE,FALSE,FALSE,FALSE,None,None
+7,Stiff Jab,Mid,Stamina,1,2,1,OnAttackLand,Focus,1,Jab with you body weight behind it. Recover 1 Focus on landed.,FALSE,FALSE,FALSE,FALSE,FALSE,None,None
+8,Flicker Jab,Long,Stamina,0,1,1,OnAttackLand,Focus,1,Quick jab that flick forward in weird angle. Recover 1 Focus on landed.,FALSE,FALSE,FALSE,FALSE,FALSE,None,None
+9,Step back Jab,Mid,Stamina,1,1,1,OnAttackLand,Focus,1,Step back while throwing a jab. Recover 1 Focus on landed,FALSE,FALSE,FALSE,FALSE,FALSE,Back,None
+10,Step in Jab,Mid,Stamina,1,1,1,OnAttackLand,Focus,1,Step in while throwing a jab. Recover 1 Focus on landed,FALSE,FALSE,FALSE,FALSE,FALSE,Front,None
+11,Sharp Jab,Mid,Stamina,1,1,2,OnAttackLand,Focus,2,Sharp jab that snap out and retract quickly. Recover 2 Focus on landed.,FALSE,FALSE,FALSE,FALSE,FALSE,None,None
+12,Check Hook,Mid,Focus,3,2,3,OnAttackLand,Stamina,1,Lead hook and step out of the danger. Recover 1 Stamina on landed.,TRUE,FALSE,FALSE,FALSE,FALSE,Left,None
+13,Shovel Hook,Mid,Stamina,3,4,2,OnAttackLand,None,0,Lead hook to the body. Stunt opponent on landed.,FALSE,FALSE,FALSE,FALSE,TRUE,None,None
+14,Cork screw Punch,Mid,Focus,3,2,6,OnAttackLandClean,None,0,Twisting straight punch that go over the guard. Inflict bleeding on clean hit.,FALSE,FALSE,TRUE,TRUE,FALSE,None,None

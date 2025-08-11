@@ -4,6 +4,7 @@ using System.IO;
 
 public enum ResourceType
 {
+    None,
     Stamina,
     Focus,
     Hp,
@@ -34,7 +35,7 @@ public enum Distance
     Away = 4,
     Long = 3,
     Mid = 2,
-    Short = 1
+    Close = 1
 }
 
 public enum Movement
@@ -64,6 +65,7 @@ public class SkillData : ScriptableObject
     public bool IsFeint;
     public bool IsPenetrate;
     public bool IsBleed;
+    public bool IsStun;
     public Movement movement;
     public Movement opponentPush;
 }
@@ -110,12 +112,14 @@ public class SkillCSVImporter
             ResourceType gainingType = (ResourceType)System.Enum.Parse(typeof(ResourceType), data[8].Trim());
             int gainingValue = int.Parse(data[9].Trim());
             string description = data[10].Trim();
+            Debug.Log(data[10]);
             bool IsCounter = bool.Parse(data[11].Trim());
             bool IsFeint = bool.Parse(data[12].Trim());
             bool IsPenetrate = bool.Parse(data[13].Trim());
             bool IsBleed = bool.Parse(data[14].Trim());
-            Movement movement = (Movement)System.Enum.Parse(typeof(Movement), data[15].Trim());
-            Movement opponentPush = (Movement)System.Enum.Parse(typeof(Movement), data[16].Trim());
+            bool IsStun = bool.Parse(data[15].Trim());
+            Movement movement = (Movement)System.Enum.Parse(typeof(Movement), data[16].Trim());
+            Movement opponentPush = (Movement)System.Enum.Parse(typeof(Movement), data[17].Trim());
 
             string assetPath = $"{folderPath}/{id}_{skillName}.asset";
             SkillData skill = AssetDatabase.LoadAssetAtPath<SkillData>(assetPath);
@@ -125,6 +129,7 @@ public class SkillCSVImporter
                 skill = ScriptableObject.CreateInstance<SkillData>();
                 skill.id = id;
                 skill.skillName = skillName;
+                skill.range = range;
                 skill.costType = costType;
                 skill.cost = cost;
                 skill.power = power;
@@ -137,6 +142,7 @@ public class SkillCSVImporter
                 skill.IsFeint = IsFeint;
                 skill.IsPenetrate = IsPenetrate;
                 skill.IsBleed = IsBleed;
+                skill.IsStun = IsStun;
                 skill.movement = movement;
                 skill.opponentPush = opponentPush;
 
@@ -147,6 +153,7 @@ public class SkillCSVImporter
             {
                 skill.id = id;
                 skill.skillName = skillName;
+                skill.range = range;
                 skill.costType = costType;
                 skill.cost = cost;
                 skill.power = power;
@@ -159,6 +166,7 @@ public class SkillCSVImporter
                 skill.IsFeint = IsFeint;
                 skill.IsPenetrate = IsPenetrate;
                 skill.IsBleed = IsBleed;
+                skill.IsStun = IsStun;
                 skill.movement = movement;
                 skill.opponentPush = opponentPush;
 
