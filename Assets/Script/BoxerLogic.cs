@@ -30,4 +30,9 @@ public class BoxerLogic
     {
         Stamina = Mathf.Min(Stamina + amount, MaxStamina);
     }
+
+    public void RecoverFocus(int amount)
+    {
+        Focus = Mathf.Min(Focus + amount, MaxFocus);
+    }
 }
